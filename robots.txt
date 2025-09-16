@@ -1,0 +1,4 @@
+User-agent: is_archiver
+Disallow: /
+
+Sitemap: https://127001.it/sitemap.xml

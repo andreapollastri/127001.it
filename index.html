@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>
+      127001 - Free localhost based domain wildcard for devs. Stop to edit your
+      hosts file... Use 127001.it!
+    </title>
+    <meta
+      name="description"
+      content="A free tool for developers! Test your local projects within a domain wildcard."
+    />
+    <link href="favicon.png" rel="icon" type="image/png" />
+    <style>
+      html,
+      body {
+        background-color: #fff;
+        color: #636b6f;
+        font-family: "Nunito", sans-serif;
+        font-weight: 200;
+        height: 100vh;
+        margin: 0;
+      }
+      .wild {
+        color: hotpink;
+        font-weight: 900;
+      }
+      .full-height {
+        height: 100vh;
+      }
+      .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      .position-ref {
+        position: relative;
+      }
+      .bottom-right {
+        position: absolute;
+        right: 20px;
+        bottom: 18px;
+        font-size: 11px;
+      }
+      .content {
+        text-align: center;
+      }
+      .title {
+        font-size: 36px;
+      }
+      .info {
+        color: #636b6f;
+        padding: 0 25px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      input[type="number"] {
+        width: 120px;
+        padding: 12px 20px;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+      .result {
+        color: #000;
+        font-size: 20px;
+      }
+      .m-b-md {
+        margin-bottom: 30px;
+      }
+      a,
+      a:visited,
+      a:focus {
+        color: #333333;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      a:hover {
+        color: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-center position-ref full-height">
+      <div class="content">
+        <div class="title m-b-md">
+          http://<span class="wild">*</span>.127001.it
+        </div>
+        <div class="info">
+          Free localhost based domain wildcard for devs.<br />
+          Test your next local project within a domain wildcard.<br />
+          Stop to edit your hosts file... Use 127001.it!
+          <h3>
+            <span class="wild" id="subdomain">tenant-b.</span>127001.it<span
+              class="wild"
+              id="port"
+              >:3000</span
+            >
+          </h3>
+          <br /><br /><i
+            >👾 Are you a Laravel/Filament developer? <a href="https://init.127001.it" target="_blank"></a>Click here</a></i
+          >
+        </div>
+      </div>
+      <div class="bottom-right">
+        Made by <a href="https://andreapollastri.net">Andrea Pollastri</a>
+      </div>
+    </div>
+
+    <script>
+      subdomains = [
+        "wip.",
+        "your-big-idea.",
+        "customer2792.",
+        "backend.",
+        "frontend.",
+        "admin.",
+        "login.",
+        "foo-bar.",
+        "tenant-b.",
+        "ui.",
+        "saas.",
+      ];
+      subdomain = document.getElementById("subdomain");
+      setInterval(function () {
+        subdomain.innerHTML =
+          subdomains[Math.floor(Math.random() * subdomains.length)];
+      }, 750);
+      ports = ["", ":8080", ":3000", ":5173", ":80", ""];
+      port = document.getElementById("port");
+      setInterval(function () {
+        port.innerHTML = ports[Math.floor(Math.random() * ports.length)];
+      }, 750);
+    </script>
+  </body>
+</html>
